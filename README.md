@@ -323,20 +323,42 @@ eWPT Notes
 - Authentication & Authorization:
   ```
   
-    Authentication:
+   Authentication:
+
   Verification of user identity.
   Types: Ownership-based, Knowledge-based, Inherence-based.
   Single-factor: One method of authentication.
   Two-factor: Requires two different authentication factors.
   Vulnerabilities in Single-Factor Authentication:
-  Credential over unencrypted channels.
-  Inadequate password policy:
-  Vulnerable to Dictionary Attacks:
-  Method: Systematically trying passwords from a predefined list.
-  Prevention: Strong password requirements, regular password updates, blacklist common passwords.
-  Vulnerable to Brute Force Attacks:
-  Method: Exhaustively trying all possible combinations of characters.
-  Prevention: Implement account lockout after multiple failed attempts, use complex passwords, limit login attempts.
+      Credential over unencrypted channels.
+      Inadequate password policy:
+         Vulnerable to Dictionary Attacks:
+              Method: Systematically trying passwords from a predefined list.
+              Prevention: Strong password requirements, regular password updates, blacklist common passwords.
+         Vulnerable to Brute Force Attacks:
+              Method: Exhaustively trying all possible combinations of characters.
+              Prevention: Implement account lockout after multiple failed attempts, use complex passwords, limit login attempts.
+       User Enumeration:
+          Method: Attackers identify valid user accounts through system responses to authentication attempts.
+          Prevention: Implement uniform error messages, don't disclose specific account status in responses.
+      Default or Easily-Guessable User Accounts:
+          Method: Using default or commonly known usernames.
+          Prevention: Change default usernames, avoid using easily-guessable names.
+      Remember Me Function:
+          Feature allowing users to stay logged in.
+          Vulnerability: Can lead to unauthorized access if session tokens are compromised.
+          Prevention: Implement secure session management, use long-lived tokens with limited access, offer options for users to disable "remember me" functionality.
+      Password Reset Feature:
+          Allows users to regain access to their accounts if they forget their passwords.
+          Vulnerability: Weak authentication for the password reset process can lead to unauthorized access.
+          Prevention: Use multiple verification steps, such as email confirmation or security questions, before resetting passwords.
+      Logout Weaknesses:
+          Insecure logout mechanisms may allow unauthorized users to gain access to the account.
+          Prevention: Implement secure logout procedures, invalidate session tokens upon logout, and use secure session management.
+     CAPTCHA:
+         Challenges users to prove they are human by completing a task.
+         Helps prevent automated attacks, such as brute force or credential stuffing.
+         Prevention: Implement CAPTCHA to protect against automated attacks, but ensure usability for legitimate users.
 
     Web applications should create the password reset link and
     maintain the following rules:
