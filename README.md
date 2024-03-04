@@ -322,6 +322,23 @@ eWPT Notes
     
 - Authentication & Authorization:
   ```
+  
+Authentication:
+
+Verification of user identity.
+Types: Ownership-based, Knowledge-based, Inherence-based.
+Single-factor: One method of authentication.
+Two-factor: Requires two different authentication factors.
+Vulnerabilities in Single-Factor Authentication:
+Credential over unencrypted channels.
+Inadequate password policy:
+Vulnerable to Dictionary Attacks:
+Method: Systematically trying passwords from a predefined list.
+Prevention: Strong password requirements, regular password updates, blacklist common passwords.
+Vulnerable to Brute Force Attacks:
+Method: Exhaustively trying all possible combinations of characters.
+Prevention: Implement account lockout after multiple failed attempts, use complex passwords, limit login attempts.
+
     Web applications should create the password reset link and
     maintain the following rules:
     • The link should contain a token
