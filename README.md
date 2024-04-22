@@ -1,6 +1,5 @@
-# eWPT Preparation by Joas
 
-## Recon and Enumeration Domain 
+##Recon and Enumeration Domain 
 
 ### https://blog.appsecco.com/a-penetration-testers-guide-to-sub-domain-enumeration-7d842d5570f6
 
